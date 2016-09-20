@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    build: .
+    links:
+      - mysql:mysql
+  mysql:
+    image: mysql:5.5
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    expose:
+      - "3306"
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
