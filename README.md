@@ -12,7 +12,7 @@ Creating dockercomposewithlinksample_mysql_1
 Creating dockercomposewithlinksample_web_1
 
 # PHPコンテナにログイン
-⇒  ./login.h
+⇒  ./login.sh
 
 # MySQLに繋いで情報を出力
 root@6237502e4401:/app# php connect.php
